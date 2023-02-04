@@ -1,3 +1,5 @@
 void main() {
-  print('hello world');
+  var name = 'woong';
+  name = 'woo';
+  print(name);
 }
