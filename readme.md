@@ -1,4 +1,4 @@
-<h1>Variables</h1> <br>
+<h1>Variables</h1>
 ---1
 main함수
 
@@ -108,6 +108,5 @@ const: 컴파일 할 때 값을 알고 있는 변수
 final: 런타임 중에 만들어질 수 있는 변수
 late: final, var, String같은 것들 앞에 써줄 수 있는 수식어로서 어떤 데이터가 올 지 모를 때 사용한다.
 
-<hr>
-<h1>Data Types</h1> <br>
+<h1>Data Types</h1>
 ---1
