@@ -8,7 +8,7 @@ dart는 자동으로 세미콜론을 붙여주지 않기 때문에 직접 붙여
 
 ```dart
 void main(){
-print("hello world");
+  print("hello world");
 }
 ```
 
@@ -17,9 +17,9 @@ print("hello world");
 
 ```dart
 void main() {
-var name = "pizza"; // 방법 1
-String name = "chicken"; // 방법 2
-name = "chicken ";
+  var name = "pizza"; // 방법 1
+  String name = "chicken"; // 방법 2
+  name = "chicken ";
 }
 ```
 
@@ -34,8 +34,8 @@ Dynamic 타입
 
 ```dart
 void main(){
-dynamic name;
-var name2;
+  dynamic name;
+  var name2;
 }
 ```
 
@@ -48,8 +48,8 @@ String뒤에 ?를 붙여줌으로서 name이 String 또는 null이 될 수 있�
 
 ```dart
 void main() {
-String? name = "hello";
-name = null;
+  String? name = "hello";
+  name = null;
 }
 ```
 
@@ -61,11 +61,11 @@ var대신 final로 변수를 만들게 되면 이 변수는 수정할 수 없게
 
 ```dart
 void main() {
-final name = "pizza";
-name = "ham"; // 수정 불가
+  final name = "pizza";
+  name = "ham"; // 수정 불가
 
-final String username = "tom";
-name = "tom2"; // 수정 불가
+  final String username = "tom";
+  name = "tom2"; // 수정 불가
 }
 ```
 
@@ -78,9 +78,9 @@ late 변수를 만들고, API에 요청을 보낸 뒤에 API에서 값을 보내
 
 ```dart
 void main() {
-late final String name;
+  late final String name;
 
-print(name); // name 변수에 접근 불가
+  print(name); // name 변수에 접근 불가
 }
 ```
 
@@ -93,8 +93,8 @@ const는 컴파일할 때 알고 있는 값을 사용해야 한다.
 
 ```dart
 void main() {
-const name = "tom"; // 컴파일 시점에 바뀌지 않는 값
-final username=fetchAPI(); // 컴파일 시점에 바뀌는 값
+  const name = "tom"; // 컴파일 시점에 바뀌지 않는 값
+  final username=fetchAPI(); // 컴파일 시점에 바뀌는 값
 }
 ```
 
@@ -110,3 +110,18 @@ late: final, var, String같은 것들 앞에 써줄 수 있는 수식어로서 �
 
 <h1>Data Types</h1>
 ---1
+기본 데이터 타입
+
+아래 타입을 포함한 거의 대부분의 타입들이 객체로 이루어져 있다. (함수도 객체)
+이것이 Dart가 진정한 객체 지향 언어로 불리는 이유이다.
+
+```dart
+void main() {
+  String name = "tom";
+  bool isPlay = true;
+  int age = 10;
+  double money = 52.55;
+  num x = 12;
+  num y = 1.2;
+}
+```
