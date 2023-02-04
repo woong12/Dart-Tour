@@ -1,13 +1,6 @@
 void main() {
-  var giveMeFile = true;
-  var numbers = [
-    1,
-    2,
-    3,
-    4,
-    if (giveMeFile) 5,
-  ];
-  numbers.last;
-  numbers.isEmpty;
-  print(numbers);
+  var name = 'woong';
+  var age = 10;
+  var greeting = "Hello everyone, my name is $name and I'm ${age + 2}";
+  print(greeting);
 }
