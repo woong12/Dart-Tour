@@ -1,10 +1,7 @@
 void main() {
-  Map<List<int>, bool> player = {
-    [1, 2, 3, 4]: true,
-  };
-
-  List<Map<String, Object>> players = [
-    {'name': 'Bob', 'xp': 100},
-    {'name': 'Kim'},
-  ];
+  Set<int> numbers = {1, 2, 3, 4};
+  numbers.add(1);
+  numbers.add(1);
+  numbers.add(1);
+  print(numbers);
 }
