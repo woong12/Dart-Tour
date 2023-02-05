@@ -460,3 +460,30 @@ void main() {
     ..sayHello();
 }
 ```
+
+<h4>---6 Enums</h4>
+
+enum은 우리가 실수하지 않도록 도와주는 타입이다.
+dart에서 enum type을 만드는 법은 다음과 같다
+
+```dart
+enum Team { red, blue }
+enum XPLevel { beginner, medium, pro }
+
+class Player {
+  XPLevel xp;
+  Team team;
+
+  Player({
+    required this.xp,
+    required this.team,
+  });
+}
+
+void main() {
+  var bob = Player(
+    xp: XPLevel.medium,
+    team: Team.red,
+  );
+}
+```
