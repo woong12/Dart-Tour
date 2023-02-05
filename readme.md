@@ -487,3 +487,28 @@ void main() {
   );
 }
 ```
+
+<h4>---7 Abstract Classes</h4>
+
+추상화 클래스는 다른 클래스들이 직접 구현 해야하는 메소드들을 모아놓은 일종의 `청사진`이라 보면 된다.
+추상 클래스에서는 기능을 구현하지 않는다.
+
+```dart
+abstract class Human {
+  void walk();
+}
+```
+
+extends를 이용해 상속, 확장을 할 수 있다.
+
+```dart
+  abstract class Human {
+  void walk();
+}
+class Player extends Human {
+  // 생략
+  void walk(){
+    print("working!");
+  }
+}
+```
