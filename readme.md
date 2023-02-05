@@ -165,3 +165,21 @@ void main(){
   var greeting = "hello $name, I'm ${age + 5}";
 }
 ```
+
+---4
+Collection For
+
+Dart는 조건문(if) 및 반복(for)을 사용하여 컬렉션을 구축하는 데 사용할 수 있는 컬렉션 if 및 컬렉션 for도 제공합니다.
+
+```dart
+void main() {
+  var oldFriends = ["aaa", "bbb"];
+  var newFriends = [
+    "tom",
+    "jon",
+    for (var friend in oldFriends) "❤️ $friend"
+  ];
+
+  print(newFriends); // [tom, jon, ❤️ aaa, ❤️ bbb]
+}
+```

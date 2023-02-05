@@ -1,6 +1,11 @@
 void main() {
-  var name = 'woong';
-  var age = 10;
-  var greeting = "Hello everyone, my name is $name and I'm ${age + 2}";
-  print(greeting);
+  var oldFriends = ['aa', 'bb'];
+  var newFriends = [
+    'cc',
+    'dd',
+    'ee',
+    'ff',
+    for (var friend in oldFriends) '♥ $friend'
+  ];
+  print(newFriends);
 }
