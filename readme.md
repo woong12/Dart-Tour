@@ -334,3 +334,35 @@ Player(this.name, this.age);
 첫 번째 인자는 this.name으로 두 번째 인자는 this.age로 갈 것이다.
 
 <h4>---3 Named Constructor Parameters</h4>
+
+클래스가 거대해질 경우 위와 같이 생성자 함수를 만드는 것은 비효율적이다.
+이 문제를 혀결하기위해 중괄호를 이용하거나 name parameter를 이용한다.
+
+```dart
+class Player {
+  final String name;
+  int xp;
+  String team;
+
+  //변수가 null일 수도 있기 때문에 required를 이용하거나 기본 값을 줘서 처리해 줘야한다.
+  Player({
+    required this.name,
+    required this.xp,
+    required this.team,
+  });
+
+  void sayHello() {
+    print("Hi my name is $name");
+  }
+}
+
+void main() {
+  var player = Player(
+    name: 'Bob',
+    xp: 100,
+    team: 'Red',
+  );
+  player.sayHello();
+}
+
+```
