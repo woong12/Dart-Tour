@@ -445,4 +445,18 @@ void main() {
 }
 ```
 
-<h4>---5 </h4>
+<h4>---5 Cascade Notation</h4>
+
+반복되는 부분을 ..으로 해결할 수 있다.
+각 ..들은 bob을 가리킨다. 앞에 class가 있으면 그 클래스를 가리킨다.
+
+```dart
+void main() {
+  var bob = new Player(name: "Bob", xp: 100, team: "red");
+  var potato = bob
+    ..name = 'kim'
+    ..xp = 123
+    ..team = 'blue'
+    ..sayHello();
+}
+```
