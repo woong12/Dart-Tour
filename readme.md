@@ -248,6 +248,7 @@ void main() {
 ```
 
 ---3
+Optional Positional Parameters
 Dart에서 [] 은 optional, positional parameter를 명시할 때 사용된다.
 name, age는 필수값이고 []를 통해 country를 optional값으로 지정해줄 수 있다.
 
@@ -259,5 +260,28 @@ String sayHello(String name, int age, [String? country = ""]) {
 void main() {
   var result = sayHello("sugar", 10);
   print(result);
+}
+```
+
+---4
+?? 연산자
+
+?? 연산자를 이용하면 왼쪽 값이 null인지 체크해서 null이 아니면 왼쪽 값을 리턴하고 null이면 오른쪽 값을 리턴한다.
+
+```dart
+String capitalizeName(String? name) {
+  return name?.toUpperCase() ?? "";
+}
+```
+
+??= 연산자를 이용하면 변수 안에 값이 null일 때를 체크해서 값을 할당해줄 수 있다.
+
+```dart
+void main() {
+  String? name;
+  name ??= "sugar";
+  name = null;
+  name ??= "js";
+  print(name); // js
 }
 ```

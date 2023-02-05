@@ -1,7 +1,9 @@
-String sayHello(String name, int age, [String? country = 'korea']) =>
-    'Hello $name, you are $age years old from $country';
+String capitalizezName(String? name) => name?.toUpperCase() ?? 'ANON';
 
 void main() {
-  var results = sayHello('Bob', 12);
-  print(results);
+  String? name;
+  name ??= 'Bob';
+  name = null;
+  name ??= 'another';
+  print(name);
 }
