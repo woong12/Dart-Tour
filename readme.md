@@ -512,3 +512,35 @@ class Player extends Human {
   }
 }
 ```
+
+<h4>---8 Inheritance</h4>
+
+상속을 하고 super를 이용해 부모 클래스의 생성자를 호출할 수 있다.
+
+```dart
+class Human {
+  final String name;
+  Human(this.name); // 호출 받는다.
+  void sayHello(){
+    print("Hello! $name");
+  }
+}
+
+class Player extends Human {
+  Player({
+    required this.team,
+    required String name
+  }) : super(name: name);
+    // Human의 생성자 함수를 호출한다.
+}
+```
+
+@override를 이용해 부모 클래스의 객체를 받아올 수 있다.
+
+```dart
+// 생략
+@override
+void sayHello(){
+  super.sayHello();
+}
+```
