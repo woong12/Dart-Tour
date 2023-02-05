@@ -249,6 +249,7 @@ void main() {
 
 ---3
 Optional Positional Parameters
+
 Dart에서 [] 은 optional, positional parameter를 명시할 때 사용된다.
 name, age는 필수값이고 []를 통해 country를 optional값으로 지정해줄 수 있다.
 
@@ -283,5 +284,19 @@ void main() {
   name = null;
   name ??= "js";
   print(name); // js
+}
+```
+
+---5
+TypeDef
+
+자료형에 사용자가 원하는 alias를 붙일 수 있게 해준다. (자료형 이름의 별명을 만들 때 사용)
+
+```dart
+typedef ListOfInts = List;
+
+ListOfInts reverseListOfNumbers(ListOfInts list) {
+  var reversedList = list.reversed.toList();
+  return reversedList;
 }
 ```

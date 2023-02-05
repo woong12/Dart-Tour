@@ -1,9 +1,16 @@
-String capitalizezName(String? name) => name?.toUpperCase() ?? 'ANON';
+typedef ListOfInts = List<int>;
+typedef UserInfo = Map<String, String>;
+
+ListOfInts reverseListOfNumbers(ListOfInts list) {
+  var reversed = list.reversed;
+  return reversed.toList();
+}
+
+String sayHi(UserInfo userInfo) {
+  return "Hi ${userInfo['name']}";
+}
 
 void main() {
-  String? name;
-  name ??= 'Bob';
-  name = null;
-  name ??= 'another';
-  print(name);
+  print(reverseListOfNumbers([1, 2, 3, 4]));
+  print(sayHi({"name": 'Bob'}));
 }
