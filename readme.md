@@ -364,7 +364,8 @@ void main() {
 
 <h4>---4 Named Constructors</h4>
 
-생성자 함수를 여러개 만들려면 콜론(:)을 사용해 특별한 생성자 함수를 만들 수 있다. 콜론을 넣음으로써 dart에게 여기서 객체를 초기화하라고 명령할 수 있다.
+생성자 함수를 여러개 만들려면 콜론(:)을 사용해 특별한 생성자 함수를 만들 수 있다.
+콜론을 넣음으로써 dart에게 여기서 객체를 초기화하라고 명령할 수 있다.
 
 ```dart
 class Player {
@@ -404,3 +405,44 @@ void main() {
   var player2 = Player.createBluePlayer('kim', 10);
 }
 ```
+
+Recap
+
+```dart
+class Player {
+  final String name;
+  int xp;
+  String team;
+
+  Player.fromJson(Map<String, dynamic> playerJson)
+      : name = playerJson['name'],
+        xp = playerJson['xp'],
+        team = playerJson['team'];
+
+  void sayHello() {
+    print("Hi my name is $name");
+  }
+}
+
+void main() {
+  var apiData = [
+    {
+      "name": 'Bob',
+      "team": 'Red',
+      "xp": 0,
+    },
+    {
+      "name": 'kim',
+      "team": 'Red',
+      "xp": 0,
+    },
+  ];
+
+  apiData.forEach((playerJson) {
+    var player = Player.fromJson(playerJson);
+    player.sayHello();
+  });
+}
+```
+
+<h4>---5 </h4>
