@@ -1,6 +1,5 @@
 <h1>Variables</h1>
----1
-main함수
+<h4>---1 main함수</h4>
 
 main함수는 모든 Dart 프로그램의 Entry point이다.
 main 함수에서 쓴 코드가 호출된다. (만약 main이 없다면 실행이 되지 않음)
@@ -12,8 +11,7 @@ void main(){
 }
 ```
 
----2
-변수를 만드는 2가지 방법
+<h4>---2 변수를 만드는 2가지 방법</h4>
 
 ```dart
 void main() {
@@ -26,8 +24,7 @@ void main() {
 함수나 메소드 내부에 지역변수를 선언할 때는 var를 사용하고
 class에서 변수나 property를 선언할 때는 타입을 지정해준다.
 
----3
-Dynamic 타입
+<h4>---3 Dynamic 타입</h4>
 
 여러가지 타입을 가질 수 있는 변수에 쓰는 키워드이다. (해당 변수의 타입을 알 수 없을 때 주로 사용)
 변수를 선언할 때 dynamic을 쓰거나 값을 지정하지 않으면 dynamic 타입을 가진다.
@@ -39,8 +36,7 @@ void main(){
 }
 ```
 
----4
-Null Safety
+<h4>---4 Null Safety</h4>
 
 개발자가 null 값을 참조할 수 없도록 하는 것이다.
 String뒤에 ?를 붙여줌으로서 name이 String 또는 null이 될 수 있다고 명시해준 것입니다.
@@ -53,8 +49,7 @@ void main() {
 }
 ```
 
----5
-final 변수
+<h4>---5 final 변수</h4>
 
 var대신 final로 변수를 만들게 되면 이 변수는 수정할 수 없게 된다. (딱 한 번만 설정될 수 있음)
 자바스크립트의 const랑 비슷하다.
@@ -69,8 +64,7 @@ void main() {
 }
 ```
 
----6
-late 변수
+<h4>---6 late 변수</h4>
 
 초기 데이터 없이 먼저 변수를 생성하고 추후에 데이터를 넣을 때 주로 사용한다.
 flutter로 data fecthing을 할 때 유용하다.
@@ -84,8 +78,7 @@ void main() {
 }
 ```
 
----7
-const 변수
+<h4>---7 const 변수</h4>
 
 dart에서 const는 compile-time constant를 만들어준다.
 const는 컴파일할 때 알고 있는 값을 사용해야 한다.
@@ -109,8 +102,7 @@ final: 런타임 중에 만들어질 수 있는 변수
 late: final, var, String같은 것들 앞에 써줄 수 있는 수식어로서 어떤 데이터가 올 지 모를 때 사용한다.
 
 <h1>Data Types</h1>
----1
-기본 데이터 타입
+<h4>---1 기본 데이터 타입</h4>
 
 아래 타입을 포함한 거의 대부분의 타입들이 객체로 이루어져 있다. (함수도 객체)
 이것이 Dart가 진정한 객체 지향 언어로 불리는 이유이다.
@@ -126,8 +118,7 @@ void main() {
 }
 ```
 
----2
-List를 사용하는 2가지 방법
+<h4>---2 List를 사용하는 2가지 방법</h4>
 
 ```dart
 void main() {
@@ -152,8 +143,7 @@ void main() {
 }
 ```
 
----3
-변수 사용하는 방법
+<h4>---3 변수 사용하는 방법</h4>
 
 $달러 기호를 붙이고 사용할 변수를 적어주면 된다.
 만약 무언가를 계산하고 싶다면 ${ } 형태로 적어주면 된다.
@@ -166,8 +156,7 @@ void main(){
 }
 ```
 
----4
-Collection For
+<h4>---4 Collection For</h4>
 
 Dart는 조건문(if) 및 반복(for)을 사용하여 컬렉션을 구축하는 데 사용할 수 있는 컬렉션 if 및 컬렉션 for도 제공합니다.
 
@@ -184,8 +173,7 @@ void main() {
 }
 ```
 
----5
-Maps
+<h4>---5 Maps</h4>
 
 일반적으로 맵은 key와 value를 연결하는 객체입니다. 키와 값 모두 모든 유형의 객체가 될 수 있습니다. 각 키는 한 번만 발생하지만 동일한 값을 여러 번 사용할 수 있습니다.
 
@@ -204,8 +192,7 @@ var gifts2 = Map();
   gifts2['fifth'] = 'golden rings';
 ```
 
----6
-Sets
+<h4>---6 Sets</h4>
 
 Set에 속한 모든 아이템들이 유니크해야될 때 사용한다.
 유니크할 필요가 없다면 List를 사용하면 된다.
@@ -215,8 +202,7 @@ var halogens = {'fluorine', 'chlorine', 'bromine', 'iodine', 'astatine'};
 ```
 
 <h1>Functions</h1>
----1
-Functions
+<h4>---1 Functions</h4>
 
 Dart는 진정한 객체 지향 언어이므로 함수도 객체이며 타입이 Function입니다. 이는 함수를 변수에 할당하거나 다른 함수에 인수로 전달할 수 있음을 의미합니다.
 
@@ -231,8 +217,7 @@ void main() {
 }
 ```
 
----2
-Named parameters
+<h4>---2 Named parameters</h4>
 
 Named parameters는 명시적으로 required로 표시되지 않는 한 선택 사항입니다. 기본값을 제공하지 않거나 Named parameters를 필수로 표시하지 않으면 해당 유형은 기본값이 null이 되므로 null을 허용해야 합니다.
 
@@ -247,8 +232,7 @@ void main() {
 }
 ```
 
----3
-Optional Positional Parameters
+<h4>---3 Optional Positional Parameters</h4>
 
 Dart에서 [] 은 optional, positional parameter를 명시할 때 사용된다.
 name, age는 필수값이고 []를 통해 country를 optional값으로 지정해줄 수 있다.
@@ -264,8 +248,7 @@ void main() {
 }
 ```
 
----4
-?? 연산자
+<h4>---4 ?? 연산자</h4>
 
 ?? 연산자를 이용하면 왼쪽 값이 null인지 체크해서 null이 아니면 왼쪽 값을 리턴하고 null이면 오른쪽 값을 리턴한다.
 
@@ -287,8 +270,7 @@ void main() {
 }
 ```
 
----5
-TypeDef
+<h4>---5 TypeDef</h4>
 
 자료형에 사용자가 원하는 alias를 붙일 수 있게 해준다. (자료형 이름의 별명을 만들 때 사용)
 
@@ -302,8 +284,7 @@ ListOfInts reverseListOfNumbers(ListOfInts list) {
 ```
 
 <h1>Classes</h1>
----1
-Class
+<h4>---1 Class</h4>
 
 dart에서 property를 선언할 때는 타입을 사용해서 정의한다.
 
@@ -323,8 +304,7 @@ void main(){
 }
 ```
 
----2
-Constructors
+<h4>---2 Constructors</h4>
 
 dart에서 생성자(constructor) 함수는 클래스 이름과 같아야 한다.
 
@@ -353,6 +333,4 @@ Player(this.name, this.age);
 
 첫 번째 인자는 this.name으로 두 번째 인자는 this.age로 갈 것이다.
 
-<h5>
----3
-Named Constructor Parameters </h5>
+<h4>---3 Named Constructor Parameters</h4>
